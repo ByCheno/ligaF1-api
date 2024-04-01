@@ -4,6 +4,7 @@ const v1Routes = require('./v1/routes');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.json()); // Middleware para parsear el body de las peticiones   
 app.use('/api/v1', v1Routes);
 
 app.listen(port, () => {
